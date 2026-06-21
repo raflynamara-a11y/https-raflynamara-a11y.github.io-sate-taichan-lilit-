@@ -19,12 +19,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Prepare site folder
+        run: |
+          rm -rf site || true
+          mkdir -p site
+          cp index.html site/ || true
+          cp -R assets site/ || true
+
       - name: Upload static site content
         uses: actions/upload-pages-artifact@v4
         with:
-          path: |
-            index.html
-            assets
+          path: site
           retention-days: 1
 
       - name: Deploy to GitHub Pages

@@ -1,0 +1,53 @@
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# PHP
+composer.lock
+vendor/
+
+# Database
+db/*.sql.bak
+*.sqlite
+*.db
+
+# Uploads & Temporary files
+uploads/menu/*
+!uploads/menu/.gitkeep
+uploads/*
+!uploads/.gitkeep
+
+# Logs
+logs/*
+!logs/.gitkeep
+*.log
+
+# Config
+config/database.local.php
+.env
+.env.local
+
+# Session & Cache
+sessions/
+tmp/
+cache/
+
+# Node (if using for frontend)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Backup files
+*.bak
+*.backup
+backup/
+
+# OS Files
+.DS_Store
+Thumbs.db
+.gitkeep
